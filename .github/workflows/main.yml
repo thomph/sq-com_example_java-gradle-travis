@@ -33,8 +33,7 @@ jobs:
       with:
         java-version: 11
     - name: Build with Gradle
-      run: |
-           ./gradlew sonarqube
+      run: ./gradlew sonarqube
            -Dsonar.login=${{ secrets.SONARQUBE_TOKEN }}
            -Dsonar.host.url=${{ secrets.SONARQUBE_HOST }}
            -Dsonar.projectKey=gradle-example
